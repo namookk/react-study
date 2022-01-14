@@ -1,5 +1,6 @@
 import React, {useState } from 'react';
 import './day3/day3.css'
+import Calc from './day4/Calc';
 
 function App() {
     const [number, setNumber] = useState(0);
@@ -12,10 +13,9 @@ function App() {
     function multiply(){
         setNumber(number * 2);
     }
-
     return (
     <div className="App">
-        <div> 값 : {number}</div>
+        <Calc number={number}/>
         <button onClick={minus}>-1</button>
         <button onClick={plus}>+1</button>
         <button onClick={multiply}>*2</button>
